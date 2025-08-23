@@ -1,0 +1,102 @@
+.content {
+  width: 75%;
+}
+.content--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header--title {
+  color: #526d82;
+}
+.header--activity {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.search-box {
+  background: #dde6ed;
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 6px 8px;
+  font-size: 14px;
+  flex: 1; /* input tự giãn ra */
+}
+
+.search-box .icon {
+  color: #969393;
+  font-size: 18px; /* 2px nhỏ quá, hầu như không thấy */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out; /* thêm thuộc tính để transition có tác dụng */
+}
+
+.search-box .icon:hover {
+  color: #333; /* đổi màu khi hover cho hiệu ứng rõ ràng */
+}
+.notify {
+  background: #dde6ed;
+  padding: 12px;
+  border-radius: 10px;
+  color: #969393;
+  display: flex;
+  align-items: center;
+}
+.notify .icon {
+  transition: color 0.3s ease-in-out; /* thêm thuộc tính để transition có tác dụng */
+}
+
+.icon:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+/* card--container */
+.card--container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 2rem;
+  align-items: stretch; /* tất cả card sẽ cao bằng card cao nhất */
+}
+.card {
+  flex: 1;
+  background: #dde6ed;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  transition: 0.5 ease-in-out;
+}
+.card:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+.card--cover {
+  background: #fff;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  color: #969393;
+}
+.card--title {
+  background: #ffffffc0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #526d82;
+  border-radius: 10px;
+}
