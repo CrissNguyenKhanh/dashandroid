@@ -1,6 +1,6 @@
-import Component1 from "../components/comn1/index";
+import Compent1 from "../../src/components/comn1/component1";
 //public routes
-const publicRoutes = [{ path: "/", component: Component1 }];
+const publicRoutes = [{ path: "/", component: Compent1 }];
 
 const privateRoutes = [];
 

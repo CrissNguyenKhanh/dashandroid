@@ -44,4 +44,25 @@
   background: #dde6ed;
   border-radius: 10px;
 }
+.teacher--todo {
+  display: flex;
+  gap: 10px;
+}
 
+.teacher--todo button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.teacher--todo button:first-child {
+  background-color: #4caf50;
+  color: white;
+}
+
+.teacher--todo button:last-child {
+  background-color: #f44336;
+  color: white;
+}

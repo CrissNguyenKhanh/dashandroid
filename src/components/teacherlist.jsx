@@ -1,6 +1,7 @@
 import "../styles/teacherlist.css";
 import { Image1 } from "../assset/Image1";
 import { useEffect } from "react";
+
 const teachers = [
   {
     image: Image1,
@@ -37,24 +38,33 @@ const teachers = [
 function Teacherlist() {
   useEffect(() => {
     console.log(
-      teachers.map((elemetn) => {
-        return elemetn.image;
+      teachers.map((element) => {
+        return element.image;
       })
     );
-  });
+  }, []);
+
+  const handleEdit = (name) => {
+    alert(`Sửa thông tin của ${name}`);
+  };
+
+  const handleDelete = (name) => {
+    alert(`Xóa giáo viên ${name}`);
+  };
+
   return (
     <div className="teacher--list">
       <div className="list--header">
         <h2>Teachers</h2>
-        <select name="" id="">
+        <select>
           <option value="english">English</option>
           <option value="vietnam">VietNam</option>
         </select>
       </div>
       <div className="list--container">
-        {teachers.map((teacher) => {
+        {teachers.map((teacher, index) => {
           return (
-            <div className="list">
+            <div className="list" key={index}>
               <div className="teacher-detail">
                 <img
                   className="image--list"
@@ -66,7 +76,12 @@ function Teacherlist() {
 
               <span>{teacher.duration}</span>
               <span>${teacher.cost}/hr</span>
-              <span className="teacher--todo">:</span>
+
+              {/* Thêm 2 nút Sửa và Xóa */}
+              <div className="teacher--todo">
+                <button onClick={() => handleEdit(teacher.name)}>Sửa</button>
+                <button onClick={() => handleDelete(teacher.name)}>Xóa</button>
+              </div>
             </div>
           );
         })}
